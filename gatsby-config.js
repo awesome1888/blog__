@@ -1,10 +1,12 @@
 module.exports = {
+  pathPrefix: '/blog',
   siteMetadata: {
     title: `Gatsby Starter w/ styled-componets`,
     description: `Gatsby starter using styled-components`,
     author: `@blakenoll`,
   },
   plugins: [
+    // 'gatsby-transformer-remark',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
