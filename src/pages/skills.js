@@ -8,14 +8,14 @@ import Block from '../components/Block/index.js';
 import Footer from '../components/Footer/index.js';
 import SEO from '../components/SEO/index.js';
 
-const NotFoundPage = () => {
+const SkillsPage = () => {
   return (
     <Layout>
-      <SEO title="404: Not found" keywords={['']} />
+      <SEO title="Skills" keywords={['']} />
       <Intro />
       <Central>
         <Block>
-          You just hit a route that doesn&#39;t exist... the sadness.
+          Skills!
         </Block>
       </Central>
       <Footer />
@@ -23,4 +23,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default SkillsPage;
