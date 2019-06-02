@@ -11,7 +11,7 @@ export default () => {
       query={
         graphql`
               query {
-                file(relativePath: { eq: "avatar2.jpg" }) {
+                file(relativePath: { eq: "avatar.jpg" }) {
                     childImageSharp {
                         sizes(maxWidth: 200, quality: 80) {
                             ...GatsbyImageSharpSizes
