@@ -1,12 +1,11 @@
-import React from 'react'
-import {
-  Footer,
-} from './style.js';
+import React from 'react';
+import { FooterContainer } from './style.js';
+import { Central } from '../../style/general';
 
-export default ({ children }) => (
-  <Footer>
-    © {new Date().getFullYear()}, Built with
-    {` `}
-    <a href="https://www.gatsbyjs.org">Gatsby</a>
-  </Footer>
+const Footer = () => (
+    <FooterContainer>
+        <Central>&copy; {new Date().getFullYear()}, Sergei Gannochenko</Central>
+    </FooterContainer>
 );
+
+export default Footer;

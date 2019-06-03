@@ -1,16 +1,15 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import _theme from './theme.js';
-import {makeGrid} from 'sc-companion';
 
 export const theme = _theme;
 export const ThemeContext = React.createContext(theme);
-export const withTheme = (Component) => {
-  return (props) => (
-    <ThemeContext.Consumer>
-      {value => <Component {...props} theme={value} />}
-    </ThemeContext.Consumer>
-  );
+export const withTheme = Component => {
+    return props => (
+        <ThemeContext.Consumer>
+            {value => <Component {...props} theme={value} />}
+        </ThemeContext.Consumer>
+    );
 };
 export default withTheme(createGlobalStyle`
 
@@ -28,10 +27,10 @@ export default withTheme(createGlobalStyle`
     font-weight: 400;
     line-height: 1.8;
     letter-spacing: -0.05px;
-    color: ${props => (props.theme.color.text)};
+    color: ${props => props.theme.color.text};
     font-family: Lato, sans-serif;
     min-width: 320px;
-    background-color: ${props => (props.theme.color.background)};
+    background-color: ${props => props.theme.color.background};
   }
 
   html, body, #root {
